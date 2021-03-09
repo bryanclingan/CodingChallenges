@@ -41,12 +41,27 @@ namespace Multiples3And5
             //Console.WriteLine(String.Join("\n", multiple5s)); //- used for testing
             List<int> mult5and3 = multiple3s.Union(multiple5s).ToList();
             mult5and3.Sort();
-            Console.WriteLine(String.Join("\n", mult5and3));
+            Console.WriteLine(String.Join(" ", mult5and3));
            int total = mult5and3.Sum();
-
+            
             Console.WriteLine(total);
-            
-            
+
+
+            //Below is a classmates code that I really liked as well not my own code but I wanted to have it here as a reference to show a different way to do this Challenge
+            //int multiples5and3 = 0;
+            //for (int i = 1; i <= 1000; i++)
+            //{
+            //    int three = i % 3;
+            //    int five = i % 5;
+            //    if (three== 0 || five==0)
+            //    {
+            //        Console.WriteLine($"{i}");
+            //        multiples5and3 = multiples5and3 + i;
+            //    }
+            //}
+
+            //Console.WriteLine(multiples5and3);
+
         }
     }
 }
