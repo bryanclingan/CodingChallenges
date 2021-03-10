@@ -10,21 +10,23 @@ namespace FibonacciEvenSum
     {
         static void Main(string[] args)
         {
-            long x=1;
+
+            /*By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.*/
+            long x =1;
             long y=2;
             long z =1 ;
             
             List<long> evenFibonacci = new List<long>() { 2 };
-            while (z<4000000)
+            do
             {
                 z = x + y;
-                if (z%2== 0)
+                if (z % 2 == 0)
                 {
                     evenFibonacci.Add(z);
                 }
                 x = y;
                 y = z;
-            }
+            } while (z < 4000000);
             Console.WriteLine(String.Join(" ", evenFibonacci));
             long evenFibonacciSum = evenFibonacci.Sum();
             Console.WriteLine(evenFibonacciSum);
