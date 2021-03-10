@@ -28,8 +28,8 @@ namespace FibonacciEvenSum
                 y = z;
             } while (z < 4000000);
             Console.WriteLine(String.Join(" ", evenFibonacci));
-            long evenFibonacciSum = evenFibonacci.Sum();
-            Console.WriteLine(evenFibonacciSum);
+            
+            Console.WriteLine(evenFibonacci.Sum());
         }
     }
 }
