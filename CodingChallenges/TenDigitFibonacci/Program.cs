@@ -34,7 +34,8 @@ namespace TenDigitFibonacci
 
             Console.WriteLine(String.Join(" ", t));
             
-            //int indextendigit = t.FindIndex(h => h.ToString().Length == 10);
+            int indextendigit = t.FindIndex(h => h.ToString().Length == 10);
+
             Console.WriteLine("Index for first value that has 10 digits: "+ t.FindIndex(h => h.ToString().Length == 10));
             Console.WriteLine("First value that has 10 digits: "+t[t.FindIndex(h => h.ToString().Length== 10)]);
          
