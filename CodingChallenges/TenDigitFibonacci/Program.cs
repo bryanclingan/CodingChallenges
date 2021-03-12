@@ -18,10 +18,10 @@ namespace TenDigitFibonacci
              1134903170
              */
             long x = 1;
-            long y = 2;
-            long z = 2;
+            long y = 1;
+            long z = 1;
 
-            List<long> t = new List<long>();
+            List<long> t = new List<long>() { 1 };
             do
             {
 
@@ -30,11 +30,11 @@ namespace TenDigitFibonacci
                 z = x + y;
                 x = y;
                 y = z;
-            } while (z < 90000000000);
+            } while (z < 100000000000);
 
             Console.WriteLine(String.Join(" ", t));
             
-            int indextendigit = t.FindIndex(h => h.ToString().Length == 10);
+            //int indextendigit = t.FindIndex(h => h.ToString().Length == 10);
 
             Console.WriteLine("Index for first value that has 10 digits: "+ t.FindIndex(h => h.ToString().Length == 10));
             Console.WriteLine("First value that has 10 digits: "+t[t.FindIndex(h => h.ToString().Length== 10)]);
